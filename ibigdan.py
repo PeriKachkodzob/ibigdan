@@ -9,7 +9,7 @@ chat_id = 385220023
 headers = []
 
 html = requests.get('http://ibigdan.com')
-soup = BeautifulSoup(html.text, 'lxml')
+soup = BeautifulSoup(html.text, 'html.parser')
 tags = soup.findAll('h2')
 
 for tag in tags:
